@@ -1,0 +1,37 @@
+[
+  {
+    "libraryIdentifier" : "d38344340cd53f446904179df1580f53",
+    "format" : "model",
+    "displayName" : "wires.usdz"
+  },
+  {
+    "libraryIdentifier" : "1e1a03fc75a50c57d4938257a6625116",
+    "format" : "model",
+    "displayName" : "wire.usdz"
+  },
+  {
+    "libraryIdentifier" : "6c63fe0351e95969be0af69f2a4532c0",
+    "format" : "model",
+    "displayName" : "Resistor.usdz"
+  },
+  {
+    "libraryIdentifier" : "b2c11dca21997a381690b4ed2499406f",
+    "format" : "model",
+    "displayName" : "Capacitor.usdz"
+  },
+  {
+    "libraryIdentifier" : "4d15c972d5eef125dcc06eb7913e5cd0",
+    "format" : "model",
+    "displayName" : "wire.usdz"
+  },
+  {
+    "libraryIdentifier" : "42796ab48ddfd8905a1ec24883e3e88b",
+    "format" : "model",
+    "displayName" : "voltage.usdz"
+  },
+  {
+    "libraryIdentifier" : "da1f20ba33f601411c205f37758b44e1",
+    "format" : "model",
+    "displayName" : "Lightbulb.usdz"
+  }
+]
