@@ -19,7 +19,7 @@
 
   • **MathWorks** - 
   
-  • **echoAR** - 
+  • **echoAR** - utilized echoAR by generating models/components, importing them into Reality Composer, and assembling them into a circuit
   
   
   
