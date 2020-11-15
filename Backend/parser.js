@@ -113,12 +113,10 @@ function getModelComponentName(component){
 function hardCodedConnections(){
 return `add_line('mymodel',Step.Outport,Simulink_PS_Converter.Inport);
 add_line('mymodel',Simulink_PS_Converter.RConn,Controlled_Voltage_Source.RConn(1));
-
 add_line('mymodel',Controlled_Voltage_Source.LConn,Resistor.LConn);
 add_line('mymodel', Resistor.RConn, Capacitor.LConn);
 % add_line('mymodel',Controlled_Voltage_Source.LConn,Incandescent_Lamp.LConn);
 % add_line('mymodel', Incandescent_Lamp.RConn, cap.LConn);
-
 add_line('mymodel', Capacitor.RConn, Electrical_Reference.LConn);
 add_line('mymodel', Electrical_Reference.LConn, Controlled_Voltage_Source.RConn(2));
 add_line('mymodel', Solver_Configuration.RConn, Controlled_Voltage_Source.RConn(2))
@@ -132,9 +130,6 @@ add_line('mymodel',PS_Simulink_Converter.Outport,Scope.Inport)`
 function makeItPretty(){
     return `\n Simulink.BlockDiagram.arrangeSystem('mymodel')`
 }
-
-
-
 
 
 
@@ -188,18 +183,8 @@ export function createConnections(connections){
             //code to create matlab code
             console.log("component:" + component + " componentconnectedTo"+componentConnectedTo)
             
-            // if(!isWire(connections[i]) && !isVoltageSensor()){
-            //     var componentName = getComponentName(connections[i])
-                
-        
-            //     createMatLabConnectionCode(connections[i],leftConnComp,rightConnComp)
-            // }
         }
         
-    
-    //iterate through the array of connections,
-    //if is not wire
-    //for each component find it's left and right connection 
 }
 
 //returns array of wires connected to voltmeter
@@ -286,115 +271,10 @@ function notWireInParallel(component){
 }
 
 
-// function findLeftConnectedComponent(componentConnection){
-//     //search for it in the JSON,
-//     // find left connection, 
-//     //if left is wire then find same wire
-// }
-
-// if(!isWire(connections[i]) && !isVoltageSensor()){
-//     var componentName = getComponentName(connections[i])
-//     if(isLeftSideOfComponent()){
-//         leftConnComp = findLeftConnectedComponent(connections[i])
-//         rightConnComp = findRightConnectedComponent(componentName + "_Right")
-//     } else{
-
-//     }
-//     createMatLabConnectionCode(connections[i],leftConnComp,rightConnComp)
-// }
-
-
-
-
-
 function getComponentName(connection){
     //remove left or right
 }
 
-
-
-
-
-
-/*
-function new_model(modelname) 
-% NEW_MODEL Create a new, empty Simulink model
-%    NEW_MODEL('MODELNAME') creates a new model with
-%    the name 'MODELNAME'. Without the 'MODELNAME'
-%    argument, the new model is named 'my_untitled'.
-
-if nargin == 0 
-     modelname = 'mymodel';
-end 
-
-% create and open the model
-open_system(new_system(modelname));
-
-% set default screen color
-%  set_param(modelname,'ScreenColor','green');
-
-% set default solver
-set_param(modelname,'Solver','ode15s');
-
-
-% add_block('simulink/Sources/Sine Wave','mymodel/Sine1');
-% set_param('mymodel/Sine1','position',[140,80,180,120]);
-
-add_block('fl_lib/Electrical/Electrical Elements/Capacitor','mymodel/Capacitor')
-set_param('mymodel/Capacitor', 'c', '1')
-
-add_block('fl_lib/Electrical/Electrical Sources/Controlled Voltage Source','mymodel/Controlled Voltage Source')
-
-add_block('fl_lib/Electrical/Electrical Elements/Electrical Reference','mymodel/Electrical Reference')
-
-add_block('nesl_utility/PS-Simulink Converter','mymodel/PS-Simulink Converter')
-
-add_block('fl_lib/Electrical/Electrical Elements/Resistor','mymodel/Resistor')
-% add_block('ee_lib/Passive/Incandescent Lamp', 'mymodel/Incandescent Lamp')
-
-add_block('nesl_utility/Simulink-PS Converter','mymodel/Simulink-PS Converter')
-
-add_block('nesl_utility/Solver Configuration','mymodel/Solver Configuration')
-
-add_block('fl_lib/Electrical/Electrical Sensors/Voltage Sensor','mymodel/Voltage Sensor')
-
-add_block('simulink/Commonly Used Blocks/Scope','mymodel/Scope')
-
-add_block('simulink/Sources/Step','mymodel/Step')
-
-step = get_param('mymodel/Step','PortHandles')
-simps = get_param('mymodel/Simulink-PS Converter','PortHandles')
-cvs = get_param('mymodel/Controlled Voltage Source','PortHandles')
-res = get_param('mymodel/Resistor','PortHandles')
-% lamp = get_param('mymodel/Incandescent Lamp','PortHandles') 
-cap = get_param('mymodel/Capacitor','PortHandles')
-eref = get_param('mymodel/Electrical Reference','PortHandles')
-pssim = get_param('mymodel/PS-Simulink Converter','PortHandles')
-solconf = get_param('mymodel/Solver Configuration','PortHandles')
-volsens = get_param('mymodel/Voltage Sensor','PortHandles')
-scop = get_param('mymodel/Scope','PortHandles')
-
-add_line('mymodel',step.Outport,simps.Inport);
-add_line('mymodel',simps.RConn,cvs.RConn(1));
-
-add_line('mymodel',cvs.LConn,res.LConn);
-add_line('mymodel', res.RConn, cap.LConn);
-% add_line('mymodel',cvs.LConn,lamp.LConn);
-% add_line('mymodel', lamp.RConn, cap.LConn);
-
-add_line('mymodel', cap.RConn, eref.LConn);
-add_line('mymodel', eref.LConn, cvs.RConn(2));
-add_line('mymodel', solconf.RConn, cvs.RConn(2))
-add_line('mymodel',volsens.LConn,cap.LConn)
-add_line('mymodel',volsens.RConn(2),cap.RConn)
-add_line('mymodel',volsens.RConn(1),pssim.LConn)
-add_line('mymodel',pssim.Outport,scop.Inport)
-
-
-% save the model
-%save_system(modelname)
-
-*/
 
 // connections = [{
 // 	"name": "Controlled_Voltage_Source_Left",
