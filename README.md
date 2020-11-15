@@ -19,7 +19,8 @@
 
   • **MathWorks** - 
   
-  • **echoAR** - utilized echoAR by generating models/components, importing them into Reality Composer, and assembling them into a circuit
+  • **echoAR** - utilized echoAR by generating models, importing them into Reality Composer, and assembling them for a clear visualization
+                 of the required components in a circuit (resistor/bulb)
   
   
   
