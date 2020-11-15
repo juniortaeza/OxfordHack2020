@@ -1,1 +1,3 @@
-# OxfordHack2020
+# Oxford Hack 2020
+
+**View the AR visualization of the components!**
