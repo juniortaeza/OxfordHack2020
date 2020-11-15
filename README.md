@@ -15,16 +15,13 @@
   • **components2** - AR visualization of the components in the circuit with a bulb
   
   
-  
-  
 # How we tackled the selected challenges
 
-  • **MathWorks** - 
+  • **MathWorks** - developed simulations and logic of circuit with MATLAB & Simulink and combined it with a Unity Game developed on Unity
+                    and displayed using Unity WebGL
   
   • **echoAR** - utilized echoAR by generating models, importing them into Reality Composer, and assembling them for a clear visualization
                  of the required components in a circuit (resistor/bulb)
- 
-  • ** ** - 
   
   
   
