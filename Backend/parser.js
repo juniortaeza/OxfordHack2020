@@ -1,6 +1,3 @@
-// check volt meter is in parrallel, check by looking at both hwires, and that they connect to a component
-
-
 
 const modelName = 'mymodel'
 

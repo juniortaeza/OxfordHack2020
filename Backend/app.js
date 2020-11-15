@@ -3,8 +3,7 @@ const app = express()
 import bodyParser from "body-parser"
 import cors from "cors"
 import fs from "fs"
-import { createModelScript } from '../parser.js'
-import { createConnections } from '../parser.js'
+import { createModelScript } from './parser.js'
 
 app.use(bodyParser.json())
 app.use(cors())
