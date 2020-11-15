@@ -5,6 +5,8 @@
 
 # View our Unity Game application source codes!
 
+  • **Unity** - User-interactive assembly of the components within the circuit
+
 
 # View the AR visualization of the components!
 
@@ -21,6 +23,8 @@
   
   • **echoAR** - utilized echoAR by generating models, importing them into Reality Composer, and assembling them for a clear visualization
                  of the required components in a circuit (resistor/bulb)
+ 
+  • ** ** - 
   
   
   
