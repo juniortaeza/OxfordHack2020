@@ -1,9 +1,9 @@
-# Oxford Hack 2020
+# Oxford Hack 2020 - MATLAB, Unity Game, and Augmented Reality
 
 # View our MATLAB application source codes!
 
 
-**View our Unity Game application source codes!**
+# View our Unity Game application source codes!
 
 
 # View the AR visualization of the components!
